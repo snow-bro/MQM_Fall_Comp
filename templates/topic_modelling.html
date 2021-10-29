@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Topic Modelling</h1>
+    <form action="/topic_modelling" method="post">
+        <p>
+            <textarea id ="text0" autocomplete="off" autofocus name="text0" required minlength = 200 rows=10 cols =40 placeholder="Your First Article" type="text"></textarea>
+        </p>
+        <p>
+            <textarea id ="text1" autocomplete="off" autofocus name="text1" required minlength = 200 rows=10 cols =40 placeholder="Your Second Article" type="text"></textarea>
+        </p>
+        <p>
+            <textarea id ="text2" autocomplete="off" autofocus name="text2" required minlength = 200 rows=10 cols =40 placeholder="Your Third Article" type="text"></textarea>
+        </p>
+        <input type="submit" value="Submit">
+</form>
+{% endblock %}

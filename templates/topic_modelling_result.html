@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Topics</h1>
+    <ul>
+        {% for result in topics %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
