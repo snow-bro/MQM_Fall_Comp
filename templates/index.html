@@ -1,30 +1,181 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Shallow Learning</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-{% block body %}
-  <!--Navigator-->
-  <header>
-    <table id="navigator">
-        <tr>
-            <td>
-                <a href="index.html">About Us</a>
-            </td>
-            <td>
-                <a href="nba.html">NBA Player</a>
-            </td>
-            <td>
-                <a href="quality_index.html">Quality of Life Index</a>
-            </td>
-            <td>
-                <a href="sentiment_analysis.html">MBTI Sentiment Analysis</a>
-            </td>
-            <td>
-                <a href="/topic_modelling">Topic Modelling</a>
-            </td>
-        </tr>
-    </table>
-</header>
-<!--text-->
-<main class="margin">
-<p> Intro and Stuff</p>
-</main>
-{% endblock %}
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/comoon-social.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/static/leaflet.css">
+		<!--[if lte IE 8]>
+		    <link rel="stylesheet" href="css/leaflet.ie.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="/static/main.css">
+
+        <script src="/static/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+
+        <!-- Navigation & Logo-->
+        <div class="mainmenu-wrapper">
+	        <div class="container">
+	        	<div class="menuextras">
+		        </div>
+		        <nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><a href="/"><img src="static/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+						<li class="has-submenu active">
+							<a href="#">Home</a>
+							<div class="mainmenu-submenu">
+								<div class="mainmenu-submenu-inner"> 
+									<div>
+										<h4><a href="/">Homepage</a></h4>
+										<ul>
+											<li><a href="/quality_index">Project 1: Quality of Life Index</a></li>
+											<li><a href="/nba_stats">Project 2: NBA Player Performance</a></li>
+											<li><a href="/sentiment">Project 3: Reddit MBTI Sentiment</a></li>
+											<li><a href="/consumption">Project 4: Regional Price Parties</a></li>
+											<li><a href="/topic_modelling">Project 5: Topic Modelling</a></li>
+											<li><a href="/minesweeper">Project 6: Mine Sweeper</a></li>
+										</ul>
+									</div>
+									
+								</div><!-- /mainmenu-submenu-inner -->
+							</div><!-- /mainmenu-submenu -->
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+        <!-- Page Title -->
+		<div class="section section-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Projects</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <div class="section">
+	    	<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="page-portfolio-item.html"><img src="/static/img/portfolio1.jpg" alt="Project Name"></a>
+							</div>
+							<div class="portfolio-info-fade">
+								<ul>
+									<li class="portfolio-project-name">Quality of Life Index</li>
+									<li>Which Countries Are the Happiest?</li>
+									<li class="read-more"><a href="/quality_index" class="btn">Read more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="page-portfolio-item.html"><img src="/static/img/portfolio2.jpg" alt="Project Name"></a>
+							</div>
+							<div class="portfolio-info-fade">
+								<ul>
+									<li class="portfolio-project-name"> NBA Player Performance </li>
+									<li class="portfolio-project-name">BY Advanced Stats</li>
+<li>Who are the Most Impactful Players?</li>
+					
+									<li class="read-more"><a href="/nba_stats" class="btn">Read more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="page-portfolio-item.html"><img src="/static/img/portfolio3.jpg" alt="Project Name"></a>
+							</div>
+							<div class="portfolio-info-fade">
+								<ul>
+									<li class="portfolio-project-name">Reddit mbti sentiment&nbsp;&nbsp;</li>
+									<li>What Are the Sentiments Of Different MBTIs?&nbsp;&nbsp;</li>
+									<li class="read-more"><a href="/sentiment" class="btn">Read more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="page-portfolio-item.html"><img src="/static/img/portfolio4.jpg" alt="Project Name"></a>
+							</div>
+							<div class="portfolio-info-fade">
+								<ul>
+									<li class="portfolio-project-name">Regional Price Parities by State</li>
+									<li>How Does the Consumption Structure Like in Your State?&nbsp;</li>
+									<li class="read-more"><a href="/consumption" class="btn">Read more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="page-portfolio-item.html"><img src="/static/img/portfolio5.jpg" alt="Project Name"></a>
+							</div>
+							<div class="portfolio-info-fade">
+								<ul>
+									<li class="portfolio-project-name">TOPIC Modelling</li>
+									<li>Want to Know What a Text is About?&nbsp; &nbsp; &nbsp;</li>
+									<li class="read-more"><a href="/topic_modelling" class="btn">Read more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="portfolio-item">
+							<div class="portfolio-image">
+								<a href="page-portfolio-item.html"><img src="/static/img/minesweeper_updated.jpg" alt="Project Name"></a>
+							</div>
+							<div class="portfolio-info-fade">
+								<ul>
+									<li class="portfolio-project-name">&nbsp; Minesweeper</li>
+									<li>With AI Assisted!&nbsp;&nbsp;</li>
+									<li class="read-more"><a href="/minesweeper" class="btn">Read more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    
+
+        <!-- Javascripts -->
+        <script src="/static/jquery-1.9.1.min.js"></script>
+        <script src="/static/bootstrap.min.js"></script>
+        <script src="/static/leaflet.js"></script>
+        <script src="/static/jquery.fitvids.js"></script>
+        <script src="/static/jquery.sequence-min.js"></script>
+        <script src="/static/jquery.bxslider.js"></script>
+        <script src="/static/main-menu.js"></script>
+        <script src="/static/template.js"></script>
+
+    </body>
+</html>

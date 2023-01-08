@@ -1,17 +1,157 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Shallow Learning</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-{% block body %}
-    <h1>Topic Modelling</h1>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/comoon-social.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/static/leaflet.css">
+		<!--[if lte IE 8]>
+		    <link rel="stylesheet" href="css/leaflet.ie.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="/static/main.css">
+
+        <script src="/static/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+
+        <!-- Navigation & Logo-->
+        <div class="mainmenu-wrapper">
+	        <div class="container">
+	        	<div class="menuextras">
+		        </div>
+		        <nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><a href="/"><img src="static/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+						<li class="has-submenu active">
+							<a href="#">Home</a>
+							<div class="mainmenu-submenu">
+								<div class="mainmenu-submenu-inner"> 
+									<div>
+										<h4><a href="/">Homepage</a></h4>
+										<ul>
+											<li><a href="/quality_index">Project 1: Quality of Life Index</a></li>
+											<li><a href="/nba_stats">Project 2: NBA Player Performance</a></li>
+											<li><a href="/sentiment">Project 3: Reddit MBTI Sentiment</a></li>
+											<li><a href="/consumption">Project 4: Regional Price Parties</a></li>
+											<li><a href="/topic_modelling">Project 5: Topic Modelling</a></li>
+											<li><a href="/minesweeper">Project 6: Mine Sweeper</a></li>
+										</ul>
+									</div>
+									
+								</div><!-- /mainmenu-submenu-inner -->
+							</div><!-- /mainmenu-submenu -->
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+        <!-- Page Title -->
+		
+        
+        <div class="section">
+	    	<div class="container">
+				<div class="row">
+					<!-- Sidebar -->
+					<!-- End Sidebar -->
+					<div class="col-sm-11">
+						<div class="blog-post blog-single-post">
+							<div class="single-post-title">
+								<h3>Topic Modelling Application</h3>
+							</div>
+							<div class="single-post-info">
+								<i class="glyphicon glyphicon-time"></i>  29 OCT, 2021 <a href="#" title="Show Comments"></a>
+							</div>
+							<div class="single-post-image">
+								<img src="/static/img/Topic Modelling.jpg" alt="Post Title">
+							</div>
+							<div class="single-post-content">
+								<h3>Project Intro</h3>
+								<p>
+								  In this application, we invite the user to input three different articles over 200 words. Implementing the concept of term frequency–inverse document frequency (tfidf), the model will generate the topic word for each of the three articles based on the relative term frequency in the three articles.
+								</p>
+								
+								
+								<h3>Online Topic Modeller</h3>
     <form action="/topic_modelling" method="post">
         <p>
-            <textarea id ="text0" autocomplete="off" autofocus name="text0" required minlength = 200 rows=10 cols =40 placeholder="Your First Article" type="text"></textarea>
+            <textarea id ="text0" autocomplete="off" autofocus name="text0" required minlength = 200 rows=10 cols =150 placeholder="Your First Article" type="text"></textarea>
         </p>
         <p>
-            <textarea id ="text1" autocomplete="off" autofocus name="text1" required minlength = 200 rows=10 cols =40 placeholder="Your Second Article" type="text"></textarea>
+            <textarea id ="text1" autocomplete="off" autofocus name="text1" required minlength = 200 rows=10 cols =150 placeholder="Your Second Article" type="text"></textarea>
         </p>
         <p>
-            <textarea id ="text2" autocomplete="off" autofocus name="text2" required minlength = 200 rows=10 cols =40 placeholder="Your Third Article" type="text"></textarea>
+            <textarea id ="text2" autocomplete="off" autofocus name="text2" required minlength = 200 rows=10 cols =150 placeholder="Your Third Article" type="text"></textarea>
         </p>
         <input type="submit" value="Submit">
+		
+		
+		
 </form>
-{% endblock %}
+							<!-- Comments -->
+							
+								<!-- End Comment Form -->
+							</div>
+							<!-- End Comments -->
+						</div>
+					</div>
+					<!-- End Blog Post -->
+				</div>
+			</div>
+	    </div>
+
+	    <!-- Footer -->
+	    <div class="footer">
+	    	
+		    		<div class="col-footer col-md-12 col-xs-12">
+		    			<h3>Contacts</h3>
+		    			<p class="contact-us-details">
+	        				<b>Address:</b> 100 fuqua drive, Durham, NC <br/>
+	        				<b>Phone:</b> +1 9199371481<br/>
+	        				<b>Email:</b> <a href="mailto:getintoutch@yourcompanydomain.com">xueyao.gu@duke.edu</a>
+	        			</p>
+		    		</div>
+		    		<div class="col-footer col-md-12 col-xs-12">
+		    			<h3>Stay Connected</h3>
+		    			<ul class="footer-stay-connected no-list-style">
+		    				<li><a href="#" class="facebook"></a></li>
+		    				<li><a href="#" class="twitter"></a></li>
+		    				<li><a href="#" class="googleplus"></a></li>
+		    			</ul>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-12">
+		    			<div class="footer-copyright">Copyright &copy; 2021. Shallow Learning, All rights reserved.<a target="_blank" href="http://www.moobnn.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+		    		</div>
+		    	</div>
+		    </div>
+	    </div>
+
+        <!-- Javascripts -->
+        <script src="/static/jquery-1.9.1.min.js"></script>
+        <script src="/static/bootstrap.min.js"></script>
+        <script src="/static/leaflet.js"></script>
+        <script src="/static/jquery.fitvids.js"></script>
+        <script src="/static/jquery.sequence-min.js"></script>
+        <script src="/static/jquery.bxslider.js"></script>
+        <script src="/static/main-menu.js"></script>
+        <script src="/static/template.js"></script>
+
+    </body>
+</html>
